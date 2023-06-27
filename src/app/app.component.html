@@ -1,0 +1,12 @@
+<!--Componentes del proyecto con routing -->
+
+<div class="row">
+  <div *ngIf="isLogged()" class="col">
+    <app-menu-page></app-menu-page>
+  </div>
+  <div >
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+

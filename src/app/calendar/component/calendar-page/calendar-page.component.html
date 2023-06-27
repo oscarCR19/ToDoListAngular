@@ -1,0 +1,40 @@
+<div class="calendar-container">
+  <div class="header">
+    <button (click)="previousMonth()">Anterior</button>
+    <div>{{ month }}</div>
+    <button (click)="nextMonth()">Siguiente</button>
+  </div>
+  <div class="days-of-week">
+    <div>Lunes</div>
+    <div>Martes</div>
+    <div>Miércoles</div>
+    <div>Jueves</div>
+    <div>Viernes</div>
+    <div>Sábado</div>
+    <div>Domingo</div>
+  </div>
+  <div class="weeks">
+    <div *ngFor="let week of weeks;let i=index" class="week">
+      
+      <div *ngFor="let day of week" class="day" [class.today]="isToday(day)" [class.selected]="isSelected(day)" [class.event]="hasEvent(day)">
+        <div class="day-number" (click)="selectDay(day)">{{ day.date() }}</div>
+        
+        <div class="events" *ngIf="hasEvent(day)">
+          <div *ngFor="let event of getEvents(day)" (click)="selectedEvent = event" class="event">{{ event.title }}</div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  <div class="event-form" *ngIf="selectedDay">
+    <h3>Agregar evento</h3>
+    <input [(ngModel)]="newEventTitle" placeholder="Descripción">
+    <button (click)="addEvent()">Agregar</button>
+  </div>
+
+  <div class="event-details" *ngIf="selectedEvent && selectedDay">
+    <h3>{{ selectedEvent.title }}</h3>
+    <div>{{ selectedEvent.date.format('MMMM Do YYYY') }}</div>
+    <button (click)="deleteEvent(selectedEvent)">Delete</button>
+  </div>
+</div>

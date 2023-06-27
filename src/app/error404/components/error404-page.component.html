@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 Error Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-ZvEhJn4Q+mlzc4BMcX9sJj8W86fD6UNsH1pzJy1v8dKjxT6T+T6ca9sZ6FjC6kHm6Uf+6bmnv1RYcWoSiOxH6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .error-container {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #dc3545;
+    }
+    .error-message {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #212529;
+      margin-bottom: 1rem;
+    }
+    .error-description {
+      font-size: 1.2rem;
+      color: #212529;
+      max-width: 400px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .btn-back {
+      padding: 0.75rem 1.25rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+    .btn-back:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  </style>
+</head>
+<body>
+  <div class="container error-container">
+    <div class="text-center">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-message">Sitio no encontrado!!</h2>
+      <p class="error-description">La página que está buscando podría haber sido eliminada, haber cambiado su nombre o estar temporalmente no disponible.</p>
+      <a href="/" class="btn btn-back">Regresar</a>
+    </div>
+  </div>
+  <!-- Bootstrap JS (optional) -->
+

@@ -1,0 +1,48 @@
+/* CSS */
+/* Estilos para ajustar la altura del menú a todo el viewport*/
+html,body{
+    height:100%;
+}
+.wrapper{
+    min-height:100%;
+    margin-top: 50px;
+}
+
+/* Estilos para ajustar el ancho y posición del menú */
+#sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  overflow-y: auto;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#content {
+  margin-left: 250px;
+}
+
+/* Estilos para los enlaces del menú lateral */
+#sidebar ul.components {
+  padding-top: 30px;
+}
+
+#sidebar ul li {
+  margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+  font-size: 1.1em;
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration:none;
+}
+
+#sidebar ul li a:hover {
+    background-color:#343a40;
+    text-decoration:none;
+}
